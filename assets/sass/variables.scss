@@ -1,0 +1,25 @@
+$color-orange: #ffaf00;
+$midwidth: 768px;
+$deskwidth: 1024px;
+$liquid-orange: #fcb134;
+$font-main: Oswald;
+$font-main-bold: Oswald;
+
+@mixin mid { @media (min-width: $midwidth) { @content; } }
+@mixin desk {  @media (min-width: $deskwidth) { @content; } }
+/*
+
+Fonts 
+
+
+*/
+@font-face {
+    font-family: ApexBook;
+    src: url("fonts/ApexNew-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ApexMed;
+    font-weight: bold;
+    src: url("fonts/ApexNew-Medium.otf") format("opentype");
+}

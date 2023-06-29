@@ -23,6 +23,7 @@
 	                <?php echo $button['title']; ?>
 	            </a>
 	        </div>
+	        <div class="clearfix"></div>
 	    <?php } ?>
     </div>
 </div>

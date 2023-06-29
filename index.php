@@ -11,6 +11,10 @@ get_header(); ?>
 	<?php get_template_part('includes/slider'); ?>
 </div>
 
+<section class="newld home">
+    <?php include( locate_template('parts/layouts.php') ); ?>
+</section>
+
 <?php if ( function_exists('display_instagram') ) { ?>
 	<div class="insta">
 		<div class="insta-inside">

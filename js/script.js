@@ -48,7 +48,7 @@ jQuery.fn.quickEach = (function(){
 (function($) {
 
 	// Responsive Videos
-	$('.vid-container').fitVids();
+	// $('.vid-container').fitVids();
 
 
 

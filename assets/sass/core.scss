@@ -2,7 +2,7 @@ html {
 background: #fff;
 }
 body{
-	background:#f0f0f0 url(images/noise-2.png) repeat;
+	// background:#f0f0f0 url(images/noise-2.png) repeat;
 	font-size:12px;
 	color:#4b5054;
 	font-family: "Oswald", Arial, Helvetica, sans-serif;
@@ -851,8 +851,11 @@ li.current_page_ancestor li a{
 	/*width: 960px;*/
 	// width: 80%;
 	width: 100%;
-	padding: 0 50px;
+	padding: 0 20px;
 	margin: auto;
+	@include mid() {
+		padding: 0 50px;
+	}
 }
 .soliloquy-container {
 	max-width: 100% !important;
@@ -1935,8 +1938,8 @@ text-decoration: underline;
 						  	Footer
 ======================================================================= */		
 #footerz {
-	height: 50px;
-	margin-top:60px;
+	// height: 50px;
+	// margin-top:60px;
 	background:#FFF url(images/footer-gradient.png) top repeat-x;
 	border-bottom:1px solid #fff;
 	color:#999;
@@ -1945,11 +1948,8 @@ text-decoration: underline;
 	background-repeat: repeat-x;
 	background-position: top;
 	width: 100%;
-	position: fixed;
-	padding-top: 0px;
-	padding-right: 0;
-	padding-bottom: 0px;
-	padding-left: 0;
+	// position: fixed;
+	padding: 15px 30px;
 	z-index: 1000;
 	bottom: 0;
 	left: 0;
@@ -2006,13 +2006,16 @@ text-decoration: underline;
 }
 .footertalk {
 	font-size: 1.2em;
-	word-spacing: .6em;
+	word-spacing: .2em;
 	font-family: Oswald;
 	font-weight: 300;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
+	text-align: center;
+	@include mid {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		word-spacing: .6em;
+	}
 }
 #footerleftsingle {
 	height: 15px;
@@ -2852,7 +2855,7 @@ section.newld {
 		width: 100%;
 		background-color: #eee;
 		padding: 20px 30px;
-		font-size: 16px;
+		font-size: 22px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -2871,13 +2874,16 @@ section.newld {
 	}
 	.ld-box {
 		width: 100%;
-		margin-bottom: 60px;
+		margin-bottom: 30px;
 		overflow: hidden;
-		display: flex;
-		flex-direction: row;
-		align-items: stretch;
-		flex-wrap: nowrap;
-		justify-content: center;
+		@include mid {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			flex-wrap: nowrap;
+			justify-content: center;
+			margin-bottom: 60px;
+		}
 		.text {
 			padding: 30px;
 			font-size: 18px;
@@ -2953,5 +2959,30 @@ section.newld {
 		left: 0%;
 		transform: translate(-0%,100px);
 		pointer-events: none
+	}
+}
+.foot-menu {
+	margin-top: 20px;
+	@include mid {
+		margin: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		list-style: none;
+		display: inline-block;
+		text-transform: uppercase;
+		font-size: 16px;
+		margin: 0 10px;
+	}
+	a {
+		color: #999;
+		&:hover {
+			text-decoration: none;
+			color: $liquid-orange;
+		}
 	}
 }

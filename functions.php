@@ -210,6 +210,7 @@ function shaken_page_menu_args( $args ) {
 function shaken_register_menus(){
 	register_nav_menus( array(
 			'header' => __( 'Header Menu'),
+			'footer' => __( 'Footer Menu'),
 			'culture' => __( 'Culture Menu'),
 			'culturetitle' => __( 'Culture Title'),
 			'services' => __( 'Services'),

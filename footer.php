@@ -1,48 +1,19 @@
 <br class="clearfix" />
-
-
-
-
-
-
-
-
-
-
 <div id="footerz">
-<?php if( ! is_single()) { ?>
-	<div class="wrap">
-    
-    <?php } ?>
+
    
-   <?php wp_reset_query(); // have to reset the query to query if is front page or not.?>
-    <?php if (is_front_page()) { ?>
-    <div class="facebook"><a target="_blank" href="http://www.facebook.com/liquiddesignarchitecture">Like Liquid Design on Facebook</a></div>
-    <div class="instagram"><a target="_blank" href="https://www.instagram.com/liquid_design_" rel="publisher">Follow Liquid Design on instagram</a></div>
-     <div class="copyright" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Liquid Design</span> <?php _e('Copyright', 'LiquidDesign'); ?> &copy; <?php echo date('Y'); ?></div>
-    <?php } else { ?>
-   
-    <?php }?>
-	<div class="footertalk">
-    <?php if( is_single()) { ?>
-    <div id="footerleftsingle">s</div>
-    <?php } ?>
-    architecture • interior design • planning • project management</div><!-- #footertalk --> 
-    <div class="clearfix"></div>
+<?php wp_reset_query(); // have to reset the query to query if is front page or not.?>
     
-	
-    
-    
-    
-    
-    <div class="clearfix"></div>
+<div class="footertalk">
+  <div class="">architecture • interior design • planning • project management</div>
+  <div class="foot-menu"><?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => '' ) ); ?></div>
+</div><!-- #footertalk -->
+
+
+<div class="clearfix"></div>
     
 
-        <?php if( ! is_single()) { ?>
-	</div><!-- #wrap -->
-    <?php } ?>
-   
-  
+ 
 </div><!-- #footer -->
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js?v=20120423234912"></script>

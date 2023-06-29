@@ -139,7 +139,7 @@ if( !of_get_option('disable_fontface') ): ?>
 
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 <div class="image-shower"></div>
 <div id="header">
 

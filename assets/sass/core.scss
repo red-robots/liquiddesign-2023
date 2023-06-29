@@ -591,7 +591,10 @@ img#logo{
 .header-nav select{
 	display: none;
 }
-
+.header-nav {
+	position: relative;
+	z-index: 100000;
+}
 .header-nav ul{
 	list-style:none;
 	padding:0;
@@ -708,7 +711,7 @@ li.current_page_ancestor li a{
 		position:absolute;
 		top:35px;
 		left:0;
-		z-index:99;
+		z-index:99999;
 		width:120px;
 		background:#FFF;
 		/*background:rgba( 255, 255, 255, 0.87 );*/
@@ -2848,13 +2851,20 @@ a.filter-btn, a.comment span{
 		width: 100%;
 	}
 }
+body.home {
+	section.newld.home {
+		padding-top: 60px;
+	}
+}
 section.newld {
 	background-color: #fff;
-	padding-top: 60px;
+	width: 100%;
+	position: relative;
+	z-index: 1;
 	.quote {
 		width: 100%;
 		background-color: #eee;
-		padding: 20px 30px;
+		padding: 30px 15%;
 		font-size: 22px;
 		display: flex;
 		flex-direction: row;
@@ -2867,9 +2877,25 @@ section.newld {
 		@include desk {
 			font-size: 30px;
 		}
+		p {
+			margin: 0;
+		}
 		.ld-tagline {
 			width: auto;
 			margin: 0 auto;
+		}
+	}
+	.ld-box-video {
+		width: 100%;
+		margin-bottom: 30px;
+		overflow: hidden;
+		@include mid {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			margin-bottom: 60px;
+			padding: 0 20%;
 		}
 	}
 	.ld-box {
@@ -2884,72 +2910,77 @@ section.newld {
 			justify-content: center;
 			margin-bottom: 60px;
 		}
-		.text {
-			padding: 30px;
-			font-size: 18px;
-			@include mid {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				padding: 0 50px;
-			}
-			.titles {
-				width: 100%;
-				margin-bottom: 40px;
-				.square {
-					width: 9px;
-					height: 9px;
-					background-color: $liquid-orange;
-					float: left;
-					margin: 5px 0 0 0;
-				}
-			}
-			h2 {
-				font-size: 26px;
-				margin: 0;
-				&.sub {
-					color: $liquid-orange;
-				}
-			}
-			.button {
-				width: auto;
-				display: inline-block;
-				float: left;
-				a {
-					background-color: $liquid-orange;
-					color: #fff;
-					display: block;
-					padding: 5px 35px;
-					text-transform: uppercase;
-					transition: all ease .2s;
-					transform: scale(1);
-					&:hover {
-						text-decoration: none;
-						transform: scale(1.05);
-					}
-				}
-			}
-		}
-		.video {
-			margin: 0 auto;
-			width: 100%;
-			text-align: center;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-		}
 	}
 	.ld-block {
-		// width: 100%;
-		// height: 100%;
-		// height: auto;
-		// width: auto;
 		position: relative;
 		overflow: hidden;
 		img {
 			width: 100%;
 		}
+	}
+	.text-only {
+		padding: 30px;
+		font-size: 18px;
+		width: 100%;
+		.content {
+
+		}
+	}
+	.text {
+		padding: 30px;
+		font-size: 18px;
+		@include mid {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0 50px;
+		}
+		
+	}
+	.titles {
+		width: 100%;
+		margin-bottom: 40px;
+		.square {
+			width: 9px;
+			height: 9px;
+			background-color: $liquid-orange;
+			float: left;
+			margin: 5px 0 0 0;
+		}
+	}
+	h2 {
+		font-size: 26px;
+		margin: 0;
+		&.sub {
+			color: $liquid-orange;
+		}
+	}
+	.button {
+		width: auto;
+		display: inline-block;
+		float: left;
+		a {
+			background-color: $liquid-orange;
+			color: #fff;
+			display: block;
+			padding: 5px 35px;
+			text-transform: uppercase;
+			transition: all ease .2s;
+			transform: scale(1);
+			&:hover {
+				text-decoration: none;
+				transform: scale(1.05);
+			}
+		}
+	}
+	.video {
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
 	.img-parallax {
 		width: 100%;
@@ -2960,6 +2991,18 @@ section.newld {
 		transform: translate(-0%,100px);
 		pointer-events: none
 	}
+	ul {
+		li::marker {
+		  color: $liquid-orange;
+		  content: '▪  ';
+		}
+	}
+	ol {
+		li {
+			margin-bottom: 10px;
+		}
+	}
+	
 }
 .foot-menu {
 	margin-top: 20px;

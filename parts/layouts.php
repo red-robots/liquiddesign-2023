@@ -6,6 +6,17 @@
 
                 <div class="quote"><?php echo $quote; ?></div>
 
+        <?php elseif( get_row_layout() == 'just_text' ): 
+        		$title = get_sub_field('title'); 
+                $sub_title = get_sub_field('sub_title');
+                $text_block = get_sub_field('text_block');
+                $column_count = get_sub_field('column_count');
+
+                include( locate_template('parts/block-text-only.php') ); 
+        	?>
+
+        		
+
         <?php elseif( get_row_layout() == 'image__text' ): 
                 $alignment = get_sub_field('alignment');
                 $title = get_sub_field('title'); 
@@ -76,8 +87,14 @@
                 $sub_title = get_sub_field('sub_title');
                 $content = get_sub_field('content');
                 $button = get_sub_field('button');
+
+                if( $alignment == 'none' ) {
+                	$boxClass = 'ld-box-video';
+                } else {
+                	$boxClass = 'ld-box';
+                }
                 ?>
-                <div class="ld-box <?php echo $image_width.'-'.$remainder; ?>"> 
+                <div class="<?php echo $boxClass; ?> <?php echo $image_width.'-'.$remainder; ?>"> 
                     <?php 
                     if( $alignment == 'left' ) { 
                         
@@ -126,6 +143,7 @@
                         include( locate_template('parts/block-text.php') ); 
                     } else {
                         include( locate_template('parts/block-video.php') );
+                        include( locate_template('parts/block-text.php') );
                     }
                     ?>
                 </div>

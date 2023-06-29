@@ -1,12 +1,12 @@
 <?php
 $i = 'contact';
-$alignment = get_sub_field('alignment', 'option');
-$title = get_sub_field('title', 'option'); 
-$sub_title = get_sub_field('sub_title', 'option');
-$content = get_sub_field('content', 'option');
-$button = get_sub_field('button', 'option');
-$image = get_sub_field('image', 'option');
-$image_width = get_sub_field('image_width', 'option');
+$alignment = get_field('alignment', 'option');
+$title = get_field('title', 'option'); 
+$sub_title = get_field('sub_title', 'option');
+$content = get_field('content', 'option');
+$button = get_field('button', 'option');
+$image = get_field('image', 'option');
+$image_width = get_field('image_width', 'option');
 $remainder = 100 - $image_width;
 ?>
 

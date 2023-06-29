@@ -23,6 +23,10 @@ get_header(); ?>
 	</div>
 <?php } ?>
 
+<section class="newld ">
+<?php include( locate_template('parts/contact.php') ); ?>
+</section>
+
 <div class="clearfix"></div>
     
 <?php get_footer(); ?>

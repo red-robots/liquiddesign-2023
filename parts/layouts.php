@@ -15,6 +15,12 @@
                 include( locate_template('parts/block-text-only.php') ); 
         	?>
 
+        <?php elseif( get_row_layout() == 'full_width_photo' ): 
+        		$photo = get_sub_field('photo'); 
+
+                include( locate_template('parts/block-photo.php') ); 
+        	?>
+
         		
 
         <?php elseif( get_row_layout() == 'image__text' ): 

@@ -1117,7 +1117,8 @@ img.loop-ad{
 .col1 .actions{
 	margin-left:-30px;
 	top: 20px;
-	left: 50px;
+	left: 60px;
+	transition: all ease .2s;
 }
 
 .actions > a{
@@ -2612,42 +2613,7 @@ a.filter-btn, a.comment span{
 
 		}
 	}
-	.cop {
-		color: #fff;
-		// text-transform: uppercase;
-		line-height: 1.2;
-		p {
-			font-family: $font-main;
-			font-weight: 200;
-			strong {
-				font-family: $font-main-bold;
-				font-weight: bold;
-			}
-		}
-		h1, h2 {
-			color: #fff;
-			text-transform: uppercase;
-		}
-		h1 {
-			font-size: 3rem;
-			font-weight: 400;
-			margin: 0;
-			font-family: $font-main-bold;
-			@media screen and (max-width: 960px) {
-				font-size: 2.3rem;
-			}
-		}
-		h2 {
-			font-size: 2.8rem;
-			font-family: $font-main;
-			font-weight: 200;
-			
-			@media screen and (max-width: 960px) {
-				font-size: 1.8rem;
-			}
-		}
-
-	}
+	
 	.desc {
 		@media screen and (max-width: 500px) {
 			display: none;
@@ -3028,4 +2994,113 @@ section.newld {
 			color: $liquid-orange;
 		}
 	}
+}
+.page-pad {
+	padding-top: 60px;
+}
+// .studio-box {
+// 	width: 100%;
+// 	float: left
+// }
+.studio-flex {
+	@include mid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		// flex-grow: 2;
+		gap: 20px;
+	}
+}
+.studio-box {
+	// flex-grow: 1;
+	@include mid {
+		flex-basis: 24%;
+	}
+	@include desk {
+		flex-basis: 24%;
+	}
+	@include large {
+		flex-basis: 24%;
+	}
+	img {
+		width: 100%;
+	}
+	h2 {
+		font-size: 14px;
+	    color: #333;
+	    margin-bottom: 10px;
+	    display: block;
+	    background-color: #FFF;
+	    padding: 5px;
+	}
+}
+.new-tax {
+	.box {
+		flex-basis: 24%;
+	}
+}
+.studio-desc {
+	width: 100%;
+	line-height: 1.5;
+	@include mid {
+		// width: 38%;
+		// float: left;
+		flex-basis: 49.5%;
+		padding: 0 20px 20px 0;
+	}
+	@include desk {
+		flex-basis: 49.5%;
+		// padding-bottom: 100px;
+	}
+	@include large {
+		flex-basis: 49.5%;
+	}
+	@include xlarge {
+		flex-basis: 49.5%;
+	}
+	p {
+		font-family: $font-main;
+		font-weight: 200;
+		// font-size: 18px;
+		font-size: 2vmin;
+		strong {
+			font-family: $font-main-bold;
+			font-weight: bold;
+		}
+	}
+	h1, h2 {
+		// color: #fff;
+		text-transform: uppercase;
+	}
+	h1 {
+		// font-size: 3rem;
+		font-size: 2.5vw;
+		font-weight: 400;
+		margin: 0;
+		font-family: $font-main-bold;
+		color: #4b5054;
+		@media screen and (max-width: 960px) {
+			// font-size: 2.3rem;
+		}
+	}
+	h2 {
+		// font-size: 2.8rem;
+		font-size: 3.0vh;
+		// font-size: 26px;
+		font-family: $font-main;
+		font-weight: 200;
+		color: #4b5054;
+		@media screen and (max-width: 960px) {
+			font-size: 1.8rem;
+		}
+	}
+	// h2 {
+	// 	font-size: 26px;
+	// 	// margin: 0;
+	// 	&.sub {
+	// 		color: $liquid-orange;
+	// 	}
+	// }
+
 }

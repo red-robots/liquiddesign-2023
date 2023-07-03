@@ -6,51 +6,25 @@ $featBanner = get_field('featured_banner',$termOb);
 // echo '<pre>';
 // print_r($termOb);
 // echo '</pre>';
-if( $featBanner ):
+//if( $featBanner ):
 ?>
-<div class="wrap">
-    <div class="featured-banner">
-        <div class="blackcover"></div>
-      <div class="orange-one">
-        <div class="cop">
+
+<div class="page-pad">
+    <div class="wrap studio-flexz js-blocksz">
+
+
+    <div id="grid" class="new-tax">
+
+        <div class="flexer">
+      <div class="studio-desc">
           <h1><?php echo $termOb->name; ?></h1>
           <h2><?php echo $termOb->taxonomy; ?></h2>
           <div class="desc"><?php echo term_description(); ?></div>
-        </div>
-        
       </div>
-      <!-- <div class="orange-two"></div> -->
-      <!-- <img src="<?php echo $featBanner['url']; ?>"> -->
-      
-      <!-- <div class="the-image" style="background-image: url(<?php echo $featBanner['url']; ?>);"> -->
-        <div class="the-image">
-            <img src="<?php echo $featBanner['url']; ?>">
-        </div>
-        <div class="titlebar">
-            Selected Projects
-        </div>
-        <div class="mobile">
-            <?php echo term_description(); ?>
-        </div>
-    </div>
-</div>
-<?php endif; ?>
-
-<div id="grid">
+     
 
 
 
-<div class="wrap">
-
-
-<div class="clearfix"></div>
-</div>
-
-
-<div class="wrap">
-    <?php /* Anything placed in #sort is positioned by jQuery Masonry */ ?>
-    <!-- <div class="sort"> -->
-        <div class="flexer">
     <?php 
     if ( have_posts() ) : while(have_posts()) : the_post();  
         global $my_size, $force_feat_img, $embed_code, $vid_url;
@@ -109,7 +83,7 @@ if( $featBanner ):
                 // echo '</pre>';
         ?>
         
-        <div class="all box col1<?php //echo $category_classes . $my_size; ?>">
+        <div class="all box col1 studio-boxz js-blocksz <?php //echo $category_classes . $my_size; ?>">
             <?php //echo $galLink; ?>
             <div <?php post_class( 'box-content '.$content_class ) ?>>
                 <?php 
@@ -174,7 +148,7 @@ if( $featBanner ):
                         
                     </div><!-- #img-container -->
                     
-                    <?php if( has_post_format( 'gallery' ) ) get_template_part( 'includes/gallery-list' ); ?>
+                    <?php //if( has_post_format( 'gallery' ) ) get_template_part( 'includes/gallery-list' ); ?>
                     
                 
 
@@ -193,27 +167,19 @@ if( $featBanner ):
             </div><!-- #box-content -->
         </div><!-- #box -->
         <?php endwhile; ?>
+        </div>
+        </div>
+
     </div><!-- #sort -->
 </div><!-- wrap -->
 <?php // Display pagination when applicable
 if (  $wp_query->max_num_pages > 1 ) : ?>
-	<div id="nav-below" class="navigation">
-        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older', 'shaken') ); ?></div>
-        <div class="nav-next"><?php previous_posts_link( __( 'Newer <span class="meta-nav">&rarr;</span>', 'shaken') ); ?></div>
-        <div class="clearfix"></div>
-    </div><!-- #nav-below -->
+	
 <?php endif; ?>
 
 <?php else :
 /* If there are no posts */ ?>
-<div id="sort">
-    <div class="box">
-        <div class="box-content not-found">
-        <h2><?php _e('Sorry, no posts were found', 'shaken'); ?></h2>
-        <?php get_search_form(); ?>
-        </div><!-- #not-found -->
-    </div>
-</div><!-- #sort -->
+
 <?php endif; ?>
 
 
@@ -222,6 +188,4 @@ if (  $wp_query->max_num_pages > 1 ) : ?>
 
 
 
-
-</div><!-- #grid -->
 <?php get_footer('category'); ?>

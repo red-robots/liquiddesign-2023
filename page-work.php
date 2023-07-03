@@ -8,7 +8,7 @@ get_header();
 $tax = 'studio';
 ?>
 
-<div id="grid">
+<div id="grid" class="page-pad">
 
 <?php $this_page_id = $wp_query->post->ID; ?>
 
@@ -115,7 +115,7 @@ query_posts(array(
 </div><!-- #sort -->
 </div><!-- wrap -->
 
-    <div class="page-desc center">
+    <div class="page-desc left">
         <?php the_content(); ?>
     </div>
 

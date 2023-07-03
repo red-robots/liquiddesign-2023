@@ -4,7 +4,7 @@ Template Name: Contact
 */
 get_header(); ?>
 
-<div id="grid"> 
+<div id="grid" class="page-pad"> 
 <div class="wrap">   
     <div id="content">
         

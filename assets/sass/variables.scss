@@ -1,12 +1,16 @@
 $color-orange: #ffaf00;
 $midwidth: 768px;
 $deskwidth: 1024px;
+$large: 1600px;
+$xlarge: 1699px;
 $liquid-orange: #fcb134;
 $font-main: Oswald;
 $font-main-bold: Oswald;
 
 @mixin mid { @media (min-width: $midwidth) { @content; } }
 @mixin desk {  @media (min-width: $deskwidth) { @content; } }
+@mixin large {  @media (min-width: $large) { @content; } }
+@mixin xlarge {  @media (min-width: $xlarge) { @content; } }
 /*
 
 Fonts 

@@ -2822,6 +2822,9 @@ body.home {
 		padding-top: 60px;
 	}
 }
+section.newld.leadership {
+	padding-top: 60px;
+}
 section.newld {
 	background-color: #fff;
 	width: 100%;
@@ -2829,7 +2832,7 @@ section.newld {
 	z-index: 1;
 	.quote {
 		width: 100%;
-		background-color: #eee;
+		background: #f0f0f0 url(images/noise-2.png) repeat;
 		padding: 30px 15%;
 		font-size: 22px;
 		display: flex;
@@ -2876,6 +2879,22 @@ section.newld {
 			justify-content: center;
 			margin-bottom: 60px;
 		}
+		&.leadership {
+			background: #f0f0f0 url(images/noise-2.png) repeat;
+
+		}
+		&.leadership-title {
+			h1 {
+				width: 100%;
+				padding: 0 20px;
+				margin: 0;
+				font-size: 28px;
+				color: #1a1a1a;
+				@include mid {
+					padding: 0 50px;
+				}
+			}
+		}
 	}
 	.ld-block {
 		position: relative;
@@ -2883,6 +2902,7 @@ section.newld {
 		img {
 			width: 100%;
 		}
+
 	}
 	.text-only {
 		padding: 30px;
@@ -2914,8 +2934,14 @@ section.newld {
 			margin: 5px 0 0 0;
 		}
 	}
+	h1 {
+		text-transform: uppercase;
+		color: $liquid-orange;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
 	h2 {
-		font-size: 26px;
+		font-size: 28px;
 		margin: 0;
 		&.sub {
 			color: $liquid-orange;
@@ -2994,6 +3020,9 @@ section.newld {
 			color: $liquid-orange;
 		}
 	}
+}
+.img-line {
+	line-height: 0;
 }
 .page-pad {
 	padding-top: 60px;
@@ -3103,4 +3132,10 @@ section.newld {
 	// 	}
 	// }
 
+}
+.box-contact {
+	background: #f0f0f0 url(images/noise-2.png) repeat;
+	img {
+		line-height: 0;
+	}
 }

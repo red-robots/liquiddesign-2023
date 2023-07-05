@@ -1,5 +1,7 @@
-<?php if( have_rows('layout') ):
-    while ( have_rows('layout') ) : the_row(); $i++; ?>
+<?php 
+$t=0;
+if( have_rows('layout') ):
+    while ( have_rows('layout') ) : the_row(); $i++; $t++; ?>
 
         <?php if( get_row_layout() == 'quote' ):
                 $quote = get_sub_field('quote'); ?>

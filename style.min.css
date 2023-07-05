@@ -456,19 +456,23 @@ a.filter-btn,a.comment span{text-shadow:0 1px #FFF}
 .flexwork .box{-ms-flex-preferred-size:32%;flex-basis:32%;width:auto;margin:0 0 15px 0;padding:0}
 .flexwork .box-content{width:100%}
 body.home section.newld.home{padding-top:60px}
+section.newld.leadership{padding-top:60px}
 section.newld{background-color:#fff;width:100%;position:relative;z-index:1}
-section.newld .quote{width:100%;background-color:#eee;padding:30px 15%;font-size:22px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+section.newld .quote{width:100%;background:#f0f0f0 url(images/noise-2.png) repeat;padding:30px 15%;font-size:22px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 section.newld .quote p{margin:0}
 section.newld .quote .ld-tagline{width:auto;margin:0 auto}
 section.newld .ld-box-video{width:100%;margin-bottom:30px;overflow:hidden}
 section.newld .ld-box{width:100%;margin-bottom:30px;overflow:hidden}
+section.newld .ld-box.leadership{background:#f0f0f0 url(images/noise-2.png) repeat}
+section.newld .ld-box.leadership-title h1{width:100%;padding:0 20px;margin:0;font-size:28px;color:#1a1a1a}
 section.newld .ld-block{position:relative;overflow:hidden}
 section.newld .ld-block img{width:100%}
 section.newld .text-only{padding:30px;font-size:18px;width:100%}
 section.newld .text{padding:30px;font-size:18px}
 section.newld .titles{width:100%;margin-bottom:40px}
 section.newld .titles .square{width:9px;height:9px;background-color:#fcb134;float:left;margin:5px 0 0 0}
-section.newld h2{font-size:26px;margin:0}
+section.newld h1{text-transform:uppercase;color:#fcb134;font-size:20px;margin-bottom:20px}
+section.newld h2{font-size:28px;margin:0}
 section.newld h2.sub{color:#fcb134}
 section.newld .button{width:auto;display:inline-block;float:left}
 section.newld .button a{background-color:#fcb134;color:#fff;display:block;padding:5px 35px;text-transform:uppercase;-webkit-transition:all ease .2s;transition:all ease .2s;-webkit-transform:scale(1);transform:scale(1)}
@@ -482,6 +486,7 @@ section.newld ol li{margin-bottom:10px}
 .foot-menu li{list-style:none;display:inline-block;text-transform:uppercase;font-size:16px;margin:0 10px}
 .foot-menu a{color:#999}
 .foot-menu a:hover{text-decoration:none;color:#fcb134}
+.img-line{line-height:0}
 .page-pad{padding-top:60px}
 .studio-box img{width:100%}
 .studio-box h2{font-size:14px;color:#333;margin-bottom:10px;display:block;background-color:#FFF;padding:5px}
@@ -492,11 +497,14 @@ section.newld ol li{margin-bottom:10px}
 .studio-desc h1,.studio-desc h2{text-transform:uppercase}
 .studio-desc h1{font-size:2.5vw;font-weight:400;margin:0;font-family:Oswald;color:#4b5054}
 .studio-desc h2{font-size:3vh;font-family:Oswald;font-weight:200;color:#4b5054}
+.box-contact{background:#f0f0f0 url(images/noise-2.png) repeat}
+.box-contact img{line-height:0}
 @media(min-width:768px){.wrap{padding:0 50px}
 .footertalk{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;word-spacing:.6em}
 section.newld .quote{font-size:24px;margin-bottom:60px}
 section.newld .ld-box-video{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-bottom:60px;padding:0 20%}
 section.newld .ld-box{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-bottom:60px}
+section.newld .ld-box.leadership-title h1{padding:0 50px}
 section.newld .text{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:0 50px}
 .foot-menu{margin:0}
 .studio-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;gap:20px}

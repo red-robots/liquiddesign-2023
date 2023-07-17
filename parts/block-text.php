@@ -5,10 +5,10 @@
 		$class = 'right';
 	}
  ?>
-<div class="<?php echo 'box-'. $i ?> <?php echo $class; ?> text">
+<div class="<?php echo 'box-'. $i ?> <?php echo $class; ?> text wow animate__fadeIn animate__animated animate__slow">
 	<div>
 		<?php if( $title ){ ?>
-			<div class="titles">
+			<div class="titles ">
 				<?php if( $t == 1 ){ ?>
 					<h1><?php the_title(); ?></h1>
 				<?php } ?>

@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
   *
   ------------------------------------*/
   $('.js-blocks').matchHeight();
-
+  new WOW().init();
   /*
   *
   *	Parallax Image

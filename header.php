@@ -19,6 +19,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=20120423234859" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/fancybox/jquery.fancybox-1.3.4.css" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/flexslider.css" />

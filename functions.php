@@ -396,7 +396,13 @@ function shaken_jquery(){
 			'lazyload',
 			get_bloginfo('template_directory') . '/js/jquery.lazyload.js',
 			array('jquery') );
-		wp_enqueue_script('lazyload');		
+		wp_enqueue_script('lazyload');
+
+		wp_register_script(
+			'wow',
+			get_bloginfo('template_directory') . '/assets/js/vendors/wow.js',
+			array('jquery') );
+		wp_enqueue_script('wow');		
 		
 		
 		wp_register_script(

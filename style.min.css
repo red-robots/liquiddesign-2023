@@ -209,7 +209,7 @@ body.blog .wrap,#filtering-nav,body.blog .navigation,.isotope{min-width:940px}
 .timeline .box:after,.timeline .box:before{display:none}
 .box img,.box object{z-index:0}
 .box-content{padding:0;overflow:hidden;position:relative}
-.box-content.leadership{width:70%;margin:0 auto}
+.box-content.leadership{width:60%;float:left}
 .layover-destination{position:absolute;right:0;top:0;background:url(images/header-white.png) bottom repeat;padding:20px;width:auto;overflow:hidden;font-size:12px}
 .layover-sustainability{position:absolute;right:100px;top:0;background:url(images/header-white.png) bottom repeat;padding:20px;width:300px;height:500px;overflow:hidden}
 .layover-relationship{position:absolute;left:0;top:0;background:url(images/header-white.png) bottom repeat;padding:20px;width:300px;overflow:hidden}
@@ -502,6 +502,9 @@ section.newld ol li{margin-bottom:10px}
 .box-contact{background:#f0f0f0 url(images/noise-2.png) repeat}
 .box-contact img{line-height:0}
 .work-desc{margin:40px auto;font-size:1.3rem;font-weight:300}
+.leadership-text{font-size:18px;width:100%;float:right;position:relative;z-index:1000;padding-top:30px}
+.pair{width:100%;position:relative}
+.pair .leadership-pic{width:100%}
 @media(min-width:768px){.wrap{padding:0 50px}
 .footertalk{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;word-spacing:.6em}
 section.newld .quote{font-size:24px;margin-bottom:60px}
@@ -513,9 +516,12 @@ section.newld .text{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit
 .studio-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;gap:20px}
 .studio-box{-ms-flex-preferred-size:24%;flex-basis:24%}
 .studio-desc{-ms-flex-preferred-size:49.5%;flex-basis:49.5%;padding:0 20px 20px 0}
+.leadership-text{width:40%;padding:0 50px}
 }@media(min-width:1024px){section.newld .quote{font-size:30px}
 .studio-box{-ms-flex-preferred-size:24%;flex-basis:24%}
 .studio-desc{-ms-flex-preferred-size:49.5%;flex-basis:49.5%}
+.pair .leadership-pic{width:70%;position:relative}
+.pair{width:70%;position:relative}
 }@media(min-width:1600px){.studio-box{-ms-flex-preferred-size:24%;flex-basis:24%}
 .studio-desc{-ms-flex-preferred-size:49.5%;flex-basis:49.5%}
 }@media(min-width:1699px){.studio-desc{-ms-flex-preferred-size:49.5%;flex-basis:49.5%}

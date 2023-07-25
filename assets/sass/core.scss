@@ -958,8 +958,9 @@ body.blog .wrap, #filtering-nav, body.blog .navigation, .isotope{
 	position:relative;
 }
 .box-content.leadership {
-	width: 70%;
-	margin: 0 auto;
+	width: 60%;
+	// margin: 0 auto;
+	float: left;
 	@media screen and (max-width: 1125px) {
 		width: 100%;
 	}
@@ -3152,4 +3153,31 @@ section.newld {
 	margin: 40px auto;
     font-size: 1.3rem;
     font-weight: 300;
+}
+.leadership-text {
+	font-size: 18px;
+	width: 100%;
+	float: right;
+	position: relative;
+	z-index: 1000;
+	padding-top: 30px;
+	@include mid {
+		width: 40%;
+		padding: 0 50px;
+	}
+}
+.pair  {
+	width: 100%;
+	position: relative;
+	.leadership-pic {
+		width: 100%;
+		@include desk {
+			width: 70%;
+			position: relative;
+		}
+	}
+	@include desk {
+		width: 70%;
+		position: relative;
+	}
 }

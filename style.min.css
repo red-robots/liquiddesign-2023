@@ -458,8 +458,10 @@ a.filter-btn,a.comment span{text-shadow:0 1px #FFF}
 body.home section.newld.home{padding-top:60px}
 section.newld.leadership{padding-top:60px}
 section.newld{background-color:#fff;width:100%;position:relative;z-index:1}
-section.newld .quote{width:100%;background:#f0f0f0 url(images/noise-2.png) repeat;padding:30px 15%;font-size:22px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-section.newld .quote p{margin:0}
+section.newld .quote{width:100%;background:#f0f0f0 url(images/noise-2.png) repeat;padding:30px 15%;font-size:22px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.2}
+section.newld .quote .first{padding-right:80px}
+section.newld .quote .second{padding-left:80px}
+section.newld .quote p{margin:0 auto}
 section.newld .quote .ld-tagline{width:auto;margin:0 auto}
 section.newld .ld-box-video{width:100%;margin-bottom:30px;overflow:hidden}
 section.newld .ld-box{width:100%;margin-bottom:30px;overflow:hidden}
@@ -499,6 +501,7 @@ section.newld ol li{margin-bottom:10px}
 .studio-desc h2{font-size:3vh;font-family:Oswald;font-weight:200;color:#4b5054}
 .box-contact{background:#f0f0f0 url(images/noise-2.png) repeat}
 .box-contact img{line-height:0}
+.work-desc{margin:40px auto;font-size:1.3rem;font-weight:300}
 @media(min-width:768px){.wrap{padding:0 50px}
 .footertalk{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;word-spacing:.6em}
 section.newld .quote{font-size:24px;margin-bottom:60px}

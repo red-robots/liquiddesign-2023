@@ -17,8 +17,8 @@ $featBanner = get_field('featured_banner',$termOb);
 
         <div class="flexer">
       <div class="studio-desc">
-          <!-- <h1><?php echo $termOb->name; ?></h1>
-          <h2><?php echo $termOb->taxonomy; ?></h2> -->
+          <h1><?php echo $termOb->name; ?></h1>
+          <h2><?php echo $termOb->taxonomy; ?></h2>
           <div class="desc"><?php echo term_description(); ?></div>
       </div>
      

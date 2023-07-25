@@ -5,10 +5,19 @@
 
 get_header(); 
 
+$gray_bar = get_field('gray_bar');
+$additional_text = get_field('additional_text');
+
 $tax = 'studio';
 ?>
 
 <div id="grid" class="page-pad">
+
+<div class="wrap">
+    <div class="work-desc left">
+        <?php the_content(); ?>
+    </div>
+</div>
 
 <?php $this_page_id = $wp_query->post->ID; ?>
 
@@ -113,11 +122,19 @@ query_posts(array(
     <?php endforeach; //endwhile; ?>
     
 </div><!-- #sort -->
+    <section class="newld">
+        <?php if($gray_bar){ ?>
+            <div class="quote"><?php echo $gray_bar; ?></div>
+        <?php } ?>
+        <?php if($additional_text){ ?>
+            <div class="work-desc left">
+                <?php echo $additional_text; ?>
+            </div>
+        <?php } ?>
+    </section>
 </div><!-- wrap -->
 
-    <div class="page-desc left">
-        <?php the_content(); ?>
-    </div>
+    
 
 <?php //endif; ?>
 

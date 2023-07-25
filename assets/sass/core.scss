@@ -2838,6 +2838,14 @@ section.newld {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		line-height: 1.2;
+
+		.first {
+			padding-right: 80px;
+		}
+		.second {
+			padding-left: 80px;
+		}
 
 		@include mid {
 			font-size: 24px;
@@ -2847,11 +2855,12 @@ section.newld {
 			font-size: 30px;
 		}
 		p {
-			margin: 0;
+			margin: 0 auto;
 		}
 		.ld-tagline {
 			width: auto;
 			margin: 0 auto;
+
 		}
 	}
 	.ld-box-video {
@@ -3138,4 +3147,9 @@ section.newld {
 	img {
 		line-height: 0;
 	}
+}
+.work-desc {
+	margin: 40px auto;
+    font-size: 1.3rem;
+    font-weight: 300;
 }

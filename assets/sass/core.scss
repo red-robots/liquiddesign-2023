@@ -2840,6 +2840,9 @@ section.newld {
 		flex-direction: row;
 		align-items: center;
 		line-height: 1.2;
+		&.work {
+			font-size: 20px;
+		}
 
 		.first {
 			padding-right: 80px;

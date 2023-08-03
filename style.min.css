@@ -459,6 +459,7 @@ body.home section.newld.home{padding-top:60px}
 section.newld.leadership{padding-top:60px}
 section.newld{background-color:#fff;width:100%;position:relative;z-index:1}
 section.newld .quote{width:100%;background:#f0f0f0 url(images/noise-2.png) repeat;padding:30px 15%;font-size:22px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.2}
+section.newld .quote.work{font-size:20px}
 section.newld .quote .first{padding-right:80px}
 section.newld .quote .second{padding-left:80px}
 section.newld .quote p{margin:0 auto}

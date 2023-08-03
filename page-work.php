@@ -14,9 +14,10 @@ $tax = 'studio';
 <div id="grid" class="page-pad">
 
 <div class="wrap">
-    <div class="work-desc left">
+    <section class="newld work-desc">
+        <div class="titles"><h1><?php the_title(); ?></h1></div>
         <?php the_content(); ?>
-    </div>
+    </section>
 </div>
 
 <?php $this_page_id = $wp_query->post->ID; ?>
@@ -124,14 +125,16 @@ query_posts(array(
 </div><!-- #sort -->
     <section class="newld">
         <?php if($gray_bar){ ?>
-            <div class="quote"><?php echo $gray_bar; ?></div>
+            <div class="quote work"><?php echo $gray_bar; ?></div>
         <?php } ?>
         <?php if($additional_text){ ?>
             <div class="work-desc left">
                 <?php echo $additional_text; ?>
             </div>
         <?php } ?>
+        <?php include( locate_template('parts/contact.php') ); ?>
     </section>
+
 </div><!-- wrap -->
 
     

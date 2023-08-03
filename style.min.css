@@ -470,6 +470,8 @@ section.newld .ld-box.leadership-title h1{width:100%;padding:0 20px;margin:0;fon
 section.newld .ld-block{position:relative;overflow:hidden}
 section.newld .ld-block img{width:100%}
 section.newld .text-only{padding:30px;font-size:18px;width:100%}
+section.newld .text-only .content p{width:100%}
+section.newld .text-only .content ul,section.newld .text-only .content ol{clear:both}
 section.newld .text{padding:30px;font-size:18px}
 section.newld .titles{width:100%;margin-bottom:40px}
 section.newld .titles .square{width:9px;height:9px;background-color:#fcb134;float:left;margin:5px 0 0 0}
@@ -505,6 +507,8 @@ section.newld ol li{margin-bottom:10px}
 .leadership-text{font-size:18px;width:100%;float:right;position:relative;z-index:1000;padding-top:30px}
 .pair{width:100%;position:relative}
 .pair .leadership-pic{width:100%}
+.contact-page .map,.contact-page .parking{width:100%}
+.contact-page .map iframe,.contact-page .map img,.contact-page .parking iframe,.contact-page .parking img{width:100%}
 @media(min-width:768px){.wrap{padding:0 50px}
 .footertalk{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;word-spacing:.6em}
 section.newld .quote{font-size:24px;margin-bottom:60px}
@@ -517,6 +521,8 @@ section.newld .text{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit
 .studio-box{-ms-flex-preferred-size:24%;flex-basis:24%}
 .studio-desc{-ms-flex-preferred-size:49.5%;flex-basis:49.5%;padding:0 20px 20px 0}
 .leadership-text{width:40%;padding:0 50px}
+.contact-page{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.contact-page .map,.contact-page .parking{-ms-flex-preferred-size:45%;flex-basis:45%}
 }@media(min-width:1024px){section.newld .quote{font-size:30px}
 .studio-box{-ms-flex-preferred-size:24%;flex-basis:24%}
 .studio-desc{-ms-flex-preferred-size:49.5%;flex-basis:49.5%}

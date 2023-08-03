@@ -1,11 +1,14 @@
 <style type="text/css">
-	.text-only .content {
-        column-count: <?php echo $column_count; ?>;
+	.text-only .content ol,
+	.text-only .content ul {
+        
         column-gap: 20px;
     }
 	@media (min-width: 768px) {
-        .text-only .content {
-        	column-gap: 40px;
+        .text-only .content ol,
+        .text-only .content ul {
+        	column-gap: 80px;
+        	column-count: <?php echo $column_count; ?>;
         }
     }
 </style>

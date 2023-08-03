@@ -10,7 +10,7 @@ $image_width = get_field('image_width', 'option');
 $remainder = 100 - $image_width;
 ?>
 
-<div class="ld-box <?php echo $image_width.'-'.$remainder; ?>">
+<div class="ld-box contact-element <?php echo $image_width.'-'.$remainder; ?>">
     <?php 
     if( $alignment == 'left' ) { 
         

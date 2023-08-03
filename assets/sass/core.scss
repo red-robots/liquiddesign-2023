@@ -2919,7 +2919,12 @@ section.newld {
 		font-size: 18px;
 		width: 100%;
 		.content {
-
+			p {
+				width: 100%;
+			}
+			ul, ol {
+				clear: both;
+			}
 		}
 	}
 	.text {
@@ -3179,5 +3184,22 @@ section.newld {
 	@include desk {
 		width: 70%;
 		position: relative;
+	}
+}
+.contact-page {
+	@include mid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	.map, .parking {
+		width: 100%;
+		@include mid {
+			flex-basis: 45%;
+		}
+		iframe, img {
+			width: 100%;
+		}
 	}
 }

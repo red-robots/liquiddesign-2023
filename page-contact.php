@@ -2,7 +2,10 @@
 /*
 Template Name: Contact
 */
-get_header(); ?>
+get_header(); 
+$map = get_field('map');
+$parking = get_field('parking');
+?>
 
 <div id="grid" class="page-pad"> 
 <div class="wrap">   
@@ -14,10 +17,19 @@ get_header(); ?>
 			
 			
 			<div class="about-single-pic">
-            <h1 class="page-title"><?php the_title(); ?></h1>
-			<?php the_content(); ?>
-            
-<iframe width="300" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msid=211015344836745193394.0004d047c28a55d33c5b2&amp;msa=0&amp;ie=UTF8&amp;ll=35.220205,-80.860856&amp;spn=0.012516,0.019419&amp;t=m&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?msid=211015344836745193394.0004d047c28a55d33c5b2&amp;msa=0&amp;ie=UTF8&amp;ll=35.220205,-80.860856&amp;spn=0.012516,0.019419&amp;t=m&amp;source=embed" style="color:#0000FF;text-align:left">Liquid Design</a> in a larger map</small>
+                <h1 class="page-title"><?php the_title(); ?></h1>
+    			<?php the_content(); ?>
+
+                <div class="contact-page ">
+                    <div class="map">
+                        <?php echo $map; ?>
+                     </div>
+                    <div class="parking">
+                        <img src="<?php echo $parking['url']; ?>" alt="<?php echo $parking['alt']; ?>">
+                    </div>
+
+                </div>
+                
             
             </div>
             

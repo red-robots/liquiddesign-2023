@@ -13,12 +13,12 @@ $tax = 'studio';
 
 <div id="grid" class="page-pad">
 
-<div class="wrap">
-    <section class="newld work-desc">
-        <div class="titles"><h1><?php the_title(); ?></h1></div>
-        <?php the_content(); ?>
-    </section>
-</div>
+    <div class="wrap">
+        <section class="newld work-desc">
+            <div class="titles"><h1><?php the_title(); ?></h1></div>
+            <?php the_content(); ?>
+        </section>
+    </div>
 
 <?php $this_page_id = $wp_query->post->ID; ?>
 
@@ -32,14 +32,13 @@ $terms = get_terms( $termArgs );
 // echo '<pre>';
 // print_r($terms);
 // echo '</pre>';
-/**
- * Display ALL posts
-/* Let's query some posts first... */
+
 query_posts(array(
-'showposts' => 40, // how many pages to show
-'post_parent' => $this_page_id, // parent page
-'post_type' => 'page',  // this is a page not a post
-'orderby' => 'menu_order')); /// order by this order.
+    'showposts' => 40, // how many pages to show
+    'post_parent' => $this_page_id, // parent page
+    'post_type' => 'page',  // this is a page not a post
+    'orderby' => 'menu_order'
+)); /// order by this order.
 
 /* Say hello to the Loop... */
 
@@ -51,18 +50,16 @@ query_posts(array(
     	$termId = $term->term_id;
     	$featImage = get_field( 'featured_image', $tax.'_'.$termId );
     	$termLink = get_term_link( $termId, 'studio');
-  //   	echo '<pre>';
-		// print_r($featImage);
-		// echo '</pre>';
+
     	global $my_size, $force_feat_img, $embed_code, $vid_url;
     	
         // Gather custom fields
-        $embed_code = get_post_meta($post->ID, 'soy_vid', true);
-        $vid_url = get_post_meta($post->ID, 'soy_vid_url', true);
-        $force_feat_img = get_post_meta($post->ID, 'soy_hide_vid', true);
-        $show_title = get_post_meta($post->ID, 'soy_show_title', true);
-        $show_desc = get_post_meta($post->ID, 'soy_show_desc', true);
-        $box_size = get_post_meta($post->ID, 'soy_box_size', true); 
+        //$embed_code = get_post_meta($post->ID, 'soy_vid', true);
+        //$vid_url = get_post_meta($post->ID, 'soy_vid_url', true);
+        //$force_feat_img = get_post_meta($post->ID, 'soy_hide_vid', true);
+        //$show_title = get_post_meta($post->ID, 'soy_show_title', true);
+        //$show_desc = get_post_meta($post->ID, 'soy_show_desc', true);
+        //$box_size = get_post_meta($post->ID, 'soy_box_size', true); 
         
         if( $box_size == 'Medium (485px)' ){
             $my_size = 'col3';
@@ -80,73 +77,54 @@ query_posts(array(
         
        
     ?>
-    
     <div class="all box col1<?php //echo $category_classes . $my_size; ?>">
-        
         <div <?php post_class( 'box-content '.$content_class ) ?>>
-            
-            
-                <div class="img-container">    
-                    <a href="<?php echo $termLink; ?>">
-                    	<img src="<?php echo $featImage['url']; ?>">
-                    </a>
-                   
-                    
-                 <!--   <div class="actions">
-	    				<h2>
-				           	<a href="<?php echo $termLink; ?>">
-				           		<?php echo $term->name; ?>
-				           	</a>
-			           	</h2>
-                 	</div> #actions --> 
-                    
-                    
-                </div><!-- #img-container -->
-                
-                
-            
-            
-            
-              <div class="post-content">
-            
-	            <?php // Display post title ?>
-	           <!-- <h2>
-		           	<a href="<?php the_permalink(); ?>">
-		           		<?php echo $term->name; ?>
-		           	</a>
-	           	</h2> -->
-	           
-              </div><!-- #entry -->
-          </div><!-- #box-content -->
-        
-        </div><!-- #box -->
+            <div class="img-container">    
+                <a href="<?php echo $termLink; ?>">
+                    <img src="<?php echo $featImage['url']; ?>">
+                </a>
+            </div><!-- #img-container -->
+        </div><!-- #box-content -->
+    </div><!-- #box -->
+
     <?php endforeach; //endwhile; ?>
-    
 </div><!-- #sort -->
+
+
+<?php 
+$t=0;
+if( have_rows('layouts') ): ?>
     <section class="newld">
-        <?php if($gray_bar){ ?>
-            <div class="quote work"><?php echo $gray_bar; ?></div>
-        <?php } ?>
-        <?php if($additional_text){ ?>
+    <?php while ( have_rows('layouts') ) : the_row(); $i++; $t++; ?>
+
+    
+        <?php if( get_row_layout() == 'gray_bar' ): ?>
+            <div class="quote work"><?php the_sub_field('content'); ?></div>
+       
+        <?php elseif( get_row_layout() == 'text' ): ?>
             <div class="work-desc left">
-                <?php echo $additional_text; ?>
+                <?php the_sub_field('content'); ?>
             </div>
-        <?php } ?>
-        <?php include( locate_template('parts/contact.php') ); ?>
+        <?php elseif( get_row_layout() == 'images' ): 
+                $images = get_sub_field('images');
+                // echo '<pre>';
+                // print_r($images);
+                // echo '</pre>';
+            ?>
+            <div class="work-img-section">
+            <?php foreach( $images as $img ) { ?>
+                <div class="img">
+                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+                </div>
+            <?php } ?>
+            </div>
+        <?php endif; ?>
+    <?php endwhile;?>
+    <?php include( locate_template('parts/contact.php') ); ?>
     </section>
+<?php endif; ?>
 
 </div><!-- wrap -->
-
-    
-
-<?php //endif; ?>
-
-
-
-
-
-
-
 
 </div><!-- #grid -->
 <?php get_footer('category'); ?>

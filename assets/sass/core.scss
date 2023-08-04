@@ -3162,6 +3162,20 @@ section.newld {
     font-size: 1.3rem;
     font-weight: 300;
 }
+.work-img-section {
+	margin: 40px auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	.img {
+		flex-basis: 48%;
+		img {
+			width: 100%;
+		}
+	}
+}
 .leadership-text {
 	font-size: 18px;
 	width: 100%;

@@ -505,6 +505,9 @@ section.newld ol li{margin-bottom:10px}
 .box-contact{background:#f0f0f0 url(images/noise-2.png) repeat}
 .box-contact img{line-height:0}
 .work-desc{margin:40px auto;font-size:1.3rem;font-weight:300}
+.work-img-section{margin:40px auto;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:nowrap;flex-wrap:nowrap}
+.work-img-section .img{-ms-flex-preferred-size:48%;flex-basis:48%}
+.work-img-section .img img{width:100%}
 .leadership-text{font-size:18px;width:100%;float:right;position:relative;z-index:1000;padding-top:30px}
 .pair{width:100%;position:relative}
 .pair .leadership-pic{width:100%}

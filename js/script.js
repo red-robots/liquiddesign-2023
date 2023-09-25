@@ -59,7 +59,7 @@ jQuery.fn.quickEach = (function(){
 
 	$('.flexslider').flexslider({
     	animation: "fade",
-		slideshow: true,                //Should the slider animate automatically by default? (true/false)
+		slideshow: false,                //Should the slider animate automatically by default? (true/false)
         // slideshowSpeed: 3000,           //Set the speed of the slideshow cycling, in milliseconds
         // animationDuration: 500,         //Set the speed of animations, in milliseconds
         directionNav: true,

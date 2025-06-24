@@ -133,7 +133,8 @@ $featBanner = get_field('featured_banner',$termOb);
 
                             ?>
                             <a title="<?php echo $output; ?>" class="" href="<?php the_permalink();//the_post_thumbnail_url('large'); // ?>" data-rel="<?php echo $dataRel; ?>" >
-                                <img class="lazy col1" src="<?php the_post_thumbnail_url('post-thumbnail'); ?>" data-original="<?php the_post_thumbnail_url('post-thumbnail'); ?>" >
+                                <img class="lazy col1" src="<?php the_post_thumbnail_url('full'); ?>" data-original="<?php the_post_thumbnail_url('full'); ?>" >
+                                <!-- <img class="lazy col1" src="<?php the_post_thumbnail_url('post-thumbnail'); ?>" data-original="<?php the_post_thumbnail_url('post-thumbnail'); ?>" > -->
                             </a>
                         
                         
